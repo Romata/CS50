@@ -6,15 +6,17 @@
     "configurations": [
         {
             "name": "(gdb) Запустить",
+            "preLaunchTask": "build",
             "type": "cppdbg",
             "request": "launch",
-            "program": "Введите имя программы, например: ${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/hello",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "gdb",
+            "miDebuggerPath": "/usr/local/bin/gdb",
             "setupCommands": [
                 {
                     "description": "Включить автоматическое форматирование для gdb",
